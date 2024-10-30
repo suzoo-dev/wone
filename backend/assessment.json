@@ -1,0 +1,2778 @@
+{
+  "steps": [
+    {
+      "id": "index",
+      "titleHtml": "Welcome to the WONE Assessment",
+      "__typename": "AssessmentWelcomeStep",
+      "subtitleHtml": "<p>This assessment will take you around <b>4 minutes.</b> </p> <p>It has been developed with <b>leading scientists</b> and measures your <b>stress resilience</b> across 3 pillars of <b>resilience, energy and activity.</b></p><p>When you&apos;re finished, you'll see <b>your scores</b> and receive <b>recommendations.</b></p> <p>Your <b>privacy</b> is our top priority. Your responses are <b>confidential</b> and we will never share individual data with your employer.</p>"
+    },
+    {
+      "id": "re-start",
+      "titleHtml": "Resilience",
+      "__typename": "AssessmentInfoStep",
+      "subtitleHtml": "<p>This first pillar assesses <b>how you handle work-related stress and personal challenges,</b> as well as your <b>mental resilience</b> and <b>management strategies.</b></p>"
+    },
+    {
+      "id": "re-1",
+      "input": {
+        "id": "re-1",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NONE OF THE TIME",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "RARELY",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "OCCASIONALLY",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMETIMES",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "FREQUENTLY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "MOST OF THE TIME",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "ALL OF THE TIME",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>How often have you felt stressed at work in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "re-2",
+      "input": {
+        "id": "re-2",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NONE OF THE TIME",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "RARELY",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "OCCASIONALLY",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMETIMES",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "FREQUENTLY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "MOST OF THE TIME",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "ALL OF THE TIME",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>How often have you felt anxious at work in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "re-3",
+      "input": {
+        "id": "re-3",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NONE OF THE TIME",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "RARELY",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "OCCASIONALLY",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMETIMES",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "FREQUENTLY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "MOST OF THE TIME",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "ALL OF THE TIME",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>How often have you been upset by unexpected, work-related events in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "re-4",
+      "input": {
+        "id": "re-4",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NONE OF THE TIME",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "RARELY",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "OCCASIONALLY",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMETIMES",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "FREQUENTLY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "MOST OF THE TIME",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "ALL OF THE TIME",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>How often have you struggled to manage your emotions at work in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "re-5",
+      "input": {
+        "id": "re-5",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NONE OF THE TIME",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "RARELY",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "OCCASIONALLY",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMETIMES",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "FREQUENTLY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "MOST OF THE TIME",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "ALL OF THE TIME",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>How often have you felt overwhelmed by work tasks in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "re-6",
+      "input": {
+        "id": "re-6",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NOT AT ALL",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "NOT MUCH",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "A LITTLE BIT",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMEWHAT",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "MODERATELY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "QUITE A BIT",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "VERY MUCH SO",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>To what extent has stress negatively impacted your work in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "re-7",
+      "input": {
+        "id": "re-7",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NOT AT ALL",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "NOT MUCH",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "A LITTLE BIT",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMEWHAT",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "MODERATELY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "QUITE A BIT",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "VERY MUCH SO",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>How stressed have you felt in your personal life outside of work in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "re-info",
+      "titleHtml": null,
+      "__typename": "AssessmentInfoStep",
+      "subtitleHtml": "<p>Thinking generally, to what extent do you agree with the following statements:</p>"
+    },
+    {
+      "id": "re-8",
+      "input": {
+        "id": "re-8",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I can easily adapt to challenges</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "re-9",
+      "input": {
+        "id": "re-9",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I have a trusted support system in my life</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "re-10",
+      "input": {
+        "id": "re-10",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I believe that experiencing stress helps me to grow</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "re-11",
+      "input": {
+        "id": "re-11",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I use effective techniques to manage stress</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "re-intent",
+      "input": {
+        "id": "re-intent",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>My mental resilience and stress management is an area I want to improve</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "re-additional-info",
+      "titleHtml": null,
+      "__typename": "AssessmentInfoStep",
+      "subtitleHtml": "<p>The following questions are designed to help you reflect and your responses will help WONE learn about important stressors impacting well-being. They do not contribute to your Index score.</p>"
+    },
+    {
+      "id": "re-13",
+      "input": {
+        "id": "re-13",
+        "label": "",
+        "required": true,
+        "__typename": "TextInput"
+      },
+      "response": null,
+      "titleHtml": "<p>What has been the biggest source of work-related stress in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "re-14",
+      "input": {
+        "id": "re-14",
+        "label": "",
+        "required": true,
+        "__typename": "TextInput"
+      },
+      "response": null,
+      "titleHtml": "<p>What has been the biggest source of stress in your personal life in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "en-start",
+      "titleHtml": "Energy",
+      "__typename": "AssessmentInfoStep",
+      "subtitleHtml": "<p>This second pillar assesses the <b>quality of your sleep</b> and your <b>sleeping habits</b>, as well as your overall <b>sense of energy</b>.</p>"
+    },
+    {
+      "id": "en-1",
+      "input": {
+        "id": "en-1",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "LESS THAN 5 HOURS",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "5-5.9 HOURS",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "6-6.9 HOURS",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "7-7.9 HOURS",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "8-8.9 HOURS",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "9 OR MORE HOURS",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>On average, how many hours have you slept each night in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "en-2",
+      "input": {
+        "id": "en-2",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "TERRIBLE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "BAD",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT BAD",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEITHER BAD NOR GOOD",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT GOOD",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "GOOD",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "EXCELLENT",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>How would you rate the overall quality of your sleep in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "en-3",
+      "input": {
+        "id": "en-3",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NONE OF THE TIME",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "RARELY",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "OCCASIONALLY",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMETIMES",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "FREQUENTLY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "MOST OF THE TIME",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "ALL OF THE TIME",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>How often have you struggled to fall asleep within 30 minutes of trying to fall asleep in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "en-4",
+      "input": {
+        "id": "en-4",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NONE OF THE TIME",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "RARELY",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "OCCASIONALLY",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMETIMES",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "FREQUENTLY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "MOST OF THE TIME",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "ALL OF THE TIME",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>How often have you struggled staying asleep in the last two weeks, where you wake up in the middle of the night and have trouble getting back to sleep or wake up earlier than you normally would?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "en-5",
+      "input": {
+        "id": "en-5",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "TERRIBLE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "BAD",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT BAD",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEITHER BAD NOR GOOD",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT GOOD",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "GOOD",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "EXCELLENT",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>How would you rate your overall energy levels in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "en-6",
+      "input": {
+        "id": "en-6",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NOT AT ALL",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "NOT MUCH",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "A LITTLE BIT",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMEWHAT",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "MODERATELY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "QUITE A BIT",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "VERY MUCH SO",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>To what extent have low energy levels negatively affected your work in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "en-info",
+      "titleHtml": null,
+      "__typename": "AssessmentInfoStep",
+      "subtitleHtml": "<p>Please select the answer that best describes your experience <u>over the last 2 weeks</u>:</p>"
+    },
+    {
+      "id": "en-7",
+      "input": {
+        "id": "en-7",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NONE OF THE TIME",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "RARELY",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "OCCASIONALLY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMETIMES",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "FREQUENTLY",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "MOST OF THE TIME",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "ALL OF THE TIME",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I maintain a consistent sleep routine, going to bed and waking up at the same time each day</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "en-8",
+      "input": {
+        "id": "en-8",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NONE OF THE TIME",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "RARELY",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "OCCASIONALLY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMETIMES",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "FREQUENTLY",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "MOST OF THE TIME",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "ALL OF THE TIME",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I wake up each morning feeling refreshed</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "en-9",
+      "input": {
+        "id": "en-9",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NONE OF THE TIME",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "RARELY",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "OCCASIONALLY",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMETIMES",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "FREQUENTLY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "MOST OF THE TIME",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "ALL OF THE TIME",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I rely on caffeine to function effectively</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "en-10",
+      "input": {
+        "id": "en-10",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NONE OF THE TIME",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "RARELY",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "OCCASIONALLY",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMETIMES",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "FREQUENTLY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "MOST OF THE TIME",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "ALL OF THE TIME",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I rely on sugary snacks to get through my workday</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "en-11",
+      "input": {
+        "id": "en-11",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NONE OF THE TIME",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "RARELY",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "OCCASIONALLY",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMETIMES",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "FREQUENTLY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "MOST OF THE TIME",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "ALL OF THE TIME",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I feel exhausted at the end of my workday</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "en-intent",
+      "input": {
+        "id": "en-intent",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>My sleep quality and energy levels is an area I want to improve</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "ac-start",
+      "titleHtml": "Activity",
+      "__typename": "AssessmentInfoStep",
+      "subtitleHtml": "<p>This final pillar assesses how <b>physically active</b> you are and how your <b>body feels</b>, as well as how <b>nutritious and balanced your diet is.</b></p>"
+    },
+    {
+      "id": "ac-1",
+      "input": {
+        "id": "ac-1",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "SEDENTARY \n(LITTLE OR NO EXERCISE)",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "LIGHTLY ACTIVE \n(EXERCISE 1-3 DAYS PER WEEK)",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "MODERATELY ACTIVE \n(EXERCISE 3-5 DAYS PER WEEK)",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "VERY ACTIVE \n(EXERCISE 6-7 DAYS PER WEEK)",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>How would you rate your overall level of physical activity in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "ac-2",
+      "input": {
+        "id": "ac-2",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NONE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "VERY MILD",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "MILD",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "MODERATE",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "MODERATELY SEVERE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "SEVERE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "VERY SEVERE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>Have you experienced any physical bodily pain or tension <u>during</u> your working day in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "ac-3",
+      "input": {
+        "id": "ac-3",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NONE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "VERY MILD",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "MILD",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "MODERATE",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "MODERATELY SEVERE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "SEVERE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "VERY SEVERE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>Have you experienced any physical bodily pain or tension <u>after</u> your working day in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "ac-info",
+      "titleHtml": null,
+      "__typename": "AssessmentInfoStep",
+      "subtitleHtml": "<p>Please select the answer that best describes your experience <u>over the last 2 weeks</u>:</p>"
+    },
+    {
+      "id": "ac-4",
+      "input": {
+        "id": "ac-4",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I engage in physical activity that is vigorous enough to raise my breathing/heart rate for a total of 150 minutes or more per week (e.g. cycling, running, aerobic exercises)</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "ac-5",
+      "input": {
+        "id": "ac-5",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NONE OF THE TIME",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "RARELY",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "OCCASIONALLY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMETIMES",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "FREQUENTLY",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "MOST OF THE TIME",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "ALL OF THE TIME",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I eat 5-10 portions of a variety of fresh vegetables and fruit each day</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "ac-6",
+      "input": {
+        "id": "ac-6",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "RARELY OR NEVER",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "LESS THAN ONCE A WEEK",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "1-2 TIMES A WEEK",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "3-4 TIMES A WEEK",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "ALMOST DAILY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "DAILY",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "MULTIPLE TIMES A DAY",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I eat ultra-processed foods, ready meals or take-aways as part of my diet (e.g. packaged snacks, pre-made sauces, fast food, sugary drinks, processed meat/meat alternatives)</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "ac-7",
+      "input": {
+        "id": "ac-7",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "RARELY OR NEVER",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "LESS THAN ONCE A WEEK",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "1-2 TIMES A WEEK",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "3-4 TIMES A WEEK",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "ALMOST DAILY",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "DAILY",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "MULTIPLE TIMES A DAY",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I eat healthy fats as part of my diet (e.g. oily fish, avocado, nuts, seeds, and olive oil)</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "ac-8",
+      "input": {
+        "id": "ac-8",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NONE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "1-4 UNITS",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "5-9 UNITS",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "10-14 UNITS",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "MORE THAN 14 UNITS",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>In a typical <u>week</u>, how many units of alcohol do you consume?</p> <p><i>For reference, 1 unit = 1/2 pint of \"regular\" beer/lager/cider, or 1/2 a small glass of wine, or 1 single 25ml measure of spirits</i></p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "ac-9",
+      "input": {
+        "id": "ac-9",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "LESS THAN 1 LITRE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "1-1.49 LITRES",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "1.5 LITRES OR MORE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>On an average <u>day</u>, how much water/herbal tea do you drink?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "ac-10",
+      "input": {
+        "id": "ac-10",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "NOT AT ALL",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "NOT MUCH",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "A LITTLE BIT",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "SOMEWHAT",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "MODERATELY",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "QUITE A BIT",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "VERY MUCH SO",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>To what extent has your physical health negatively affected your work in the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "ac-intent",
+      "input": {
+        "id": "ac-intent",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>My physical fitness and nutrition is an area I want to improve</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "feedback",
+      "input": {
+        "id": "feedback",
+        "label": "",
+        "required": true,
+        "__typename": "TextInput"
+      },
+      "response": null,
+      "titleHtml": "<p>Finally, how did you find completing this Assessment?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": "<p><i>This is valuable feedback to help WONE understand ways to improve this measure.</i></p>"
+    },
+    {
+      "id": "co-feedback",
+      "input": {
+        "id": "co-feedback",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "YES, \nTAKE ME TO THE COMPANY QUESTIONS",
+            "value": "0",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "NO, \nI DON'T WANT TO SHARE COMPANY INSIGHTS",
+            "value": "0",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>Well done! Your scores are waiting...</p><p><b>Can you spare 1 more minute?</b></p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": "<p>We periodically want to ask you a few important questions to understand your <b>working environment</b> and how it impacts you.</p><p>Your <b>anonymous</b> answers will be used to provide <b>valuable insights for the people and wellbeing strategy at your company.</b> They will not be included in your personal Index score.</p><p>It won't take long, only <b>1-2 minutes.</b></p>"
+    },
+    {
+      "id": "co-start",
+      "titleHtml": "<p><b>Your Company</b></p>",
+      "__typename": "AssessmentInfoStep",
+      "subtitleHtml": "<p>This section is designed to understand your <b>working environment</b> and how it impacts you.</p><p>Your <b>anonymous responses</b> will be used to provide <b>insights for the people and wellbeing strategy at your company</b> and they will not be included in your personal Index score."
+    },
+    {
+      "id": "co-1",
+      "input": {
+        "id": "co-1",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "YES",
+            "value": "0",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "NO",
+            "value": "0",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I have responsibilities in managing or supervising others in my role</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "co-2",
+      "input": {
+        "id": "co-2",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>Our work culture actively supports personal well-being</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "co-3",
+      "input": {
+        "id": "co-3",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I am receiving adequate support for my well-being from my manager</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "co-4",
+      "input": {
+        "id": "co-4",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I can allocate sufficient time at work to focus on my well-being</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "co-5",
+      "input": {
+        "id": "co-5",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I successfully balance my professional and personal life</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "co-6",
+      "input": {
+        "id": "co-6",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>My current workload is manageable</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "co-7",
+      "input": {
+        "id": "co-7",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I have the freedom to make decisions about my work processes</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "co-8",
+      "input": {
+        "id": "co-8",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I receive necessary support from my colleagues</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "co-9",
+      "input": {
+        "id": "co-9",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>My work relationships are generally harmonious</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "co-10",
+      "input": {
+        "id": "co-10",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I can make a mistake at work without worrying people will hold it against me</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "co-11",
+      "input": {
+        "id": "co-11",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>We&apos;re able to bring up problems and tough issues at work</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "co-12",
+      "input": {
+        "id": "co-12",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "STRONGLY DISAGREE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "DISAGREE",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT DISAGREE",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEUTRAL",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT AGREE",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "AGREE",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "STRONGLY AGREE",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>I feel comfortable voicing my ideas at work without fear of negative consequences</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "co-13",
+      "input": {
+        "id": "co-13",
+        "label": "",
+        "options": [
+          {
+            "id": "1",
+            "label": "TERRIBLE",
+            "value": "1",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "2",
+            "label": "BAD",
+            "value": "2",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "3",
+            "label": "SOMEWHAT BAD",
+            "value": "3",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "4",
+            "label": "NEITHER BAD NOR GOOD",
+            "value": "4",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "5",
+            "label": "SOMEWHAT GOOD",
+            "value": "5",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "6",
+            "label": "GOOD",
+            "value": "6",
+            "__typename": "SelectInputOption"
+          },
+          {
+            "id": "7",
+            "label": "EXCELLENT",
+            "value": "7",
+            "__typename": "SelectInputOption"
+          }
+        ],
+        "required": true,
+        "__typename": "SelectInput"
+      },
+      "response": null,
+      "titleHtml": "<p>How would you rate your overall level of productivity at work over the last two weeks?</p>",
+      "__typename": "AssessmentQuestionStep",
+      "subtitleHtml": null
+    },
+    {
+      "id": "end",
+      "titleHtml": "Well done on completing your WONE Assessment",
+      "__typename": "AssessmentEndStep",
+      "subtitleHtml": "<p>We&apos;re going to <b>take you back to your profile</b> so that you can see your complete <b>WONE Index results</b> and <b>start exploring recommendations.</b></p>"
+    }
+  ],
+  "version": "1.5.0",
+  "__typename": "LearnerAssessment"
+}
