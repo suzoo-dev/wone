@@ -11,16 +11,70 @@ datasource db {
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
-  username String  @unique
-  role   Role    @default(USER)
+  id                 Int          @id @default(autoincrement())
+  username           String       @unique
+  role               Role         @default(USER)
+  createdAt          DateTime     @default(now())
+  updatedAt          DateTime     @updatedAt
+  Response           Response[]
+  createdAssessments Assessment[] @relation("createdAssessments")
+  updatedAssessments Assessment[] @relation("updatedAssessments")
 }
 
 model Step {
-  step_id Int @id @default(autoincrement())
-  title   String
-  subtitle String
-  type StepType
+  id           Int         @id @default(autoincrement())
+  title        String
+  subtitle     String
+  type         StepType
+  Assessment   Assessment? @relation(fields: [assessmentId], references: [id])
+  assessmentId Int?
+  Input        Input[]
+  Response     Response[]
+}
+
+model Assessment {
+  id          Int            @id @default(autoincrement())
+  steps       Step[]
+  version     String
+  type        AssessmentType
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+  createdBy   User?          @relation("createdAssessments", fields: [createdById], references: [id])
+  createdById Int?
+  updatedBy   User?          @relation("updatedAssessments", fields: [updatedById], references: [id])
+  updatedById Int?
+}
+
+model Input {
+  id        Int        @id @default(autoincrement())
+  Step      Step       @relation(fields: [stepId], references: [id])
+  stepId    Int
+  label     String
+  options   Option[]
+  required  Boolean
+  inputType InputType
+  Response  Response[]
+}
+
+model Option {
+  id      Int    @id @default(autoincrement())
+  Input   Input  @relation(fields: [inputId], references: [id])
+  inputId Int
+  label   String
+  value   String
+}
+
+model Response {
+  id        Int      @id @default(autoincrement())
+  Step      Step     @relation(fields: [stepId], references: [id])
+  stepId    Int
+  Input     Input    @relation(fields: [inputId], references: [id])
+  inputId   Int
+  User      User     @relation(fields: [userId], references: [id])
+  userId    Int
+  value     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 enum Role {
@@ -33,4 +87,13 @@ enum StepType {
   ASSESSMENT_INFO_STEP
   ASSESSMENT_QUESTION_STEP
   ASSESSMENT_END_STEP
+}
+
+enum AssessmentType {
+  LEARNER_ASSESSMENT
+}
+
+enum InputType {
+  SELECT_INPUT
+  TEXT_INPUT
 }
