@@ -6,6 +6,31 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model User {
+  id    Int     @id @default(autoincrement())
+  username String  @unique
+  role   Role    @default(USER)
+}
+
+model Step {
+  step_id Int @id @default(autoincrement())
+  title   String
+  subtitle String
+  type StepType
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum StepType {
+  ASSESSMENT_WELCOME_STEP
+  ASSESSMENT_INFO_STEP
+  ASSESSMENT_QUESTION_STEP
+  ASSESSMENT_END_STEP
 }
