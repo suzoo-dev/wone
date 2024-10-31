@@ -4,16 +4,54 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const fastify_1 = __importDefault(require("fastify"));
+const env_1 = __importDefault(require("@fastify/env"));
+const jwt_1 = __importDefault(require("@fastify/jwt"));
+const cookie_1 = __importDefault(require("@fastify/cookie"));
 const user_route_1 = require("./modules/user/user.route");
-const server = (0, fastify_1.default)({ logger: true });
-server.get("/healthcheck", async (request, reply) => {
-    reply.send({ message: "Success" });
-});
-server.register(user_route_1.userRoutes, { prefix: "api/user" });
-server.listen({ port: 8080 }, (err, address) => {
-    if (err) {
+const schema = {
+    type: "object",
+    properties: {
+        JWT_SECRET: { type: "string" },
+        DATABASE_URL: { type: "string" },
+    },
+    required: ["JWT_SECRET", "DATABASE_URL"],
+};
+const options = {
+    confKey: "config",
+    schema,
+    data: process.env,
+    dotenv: {
+        path: `${__dirname}/.env`,
+        debug: true,
+    },
+};
+async function buildServer() {
+    const server = (0, fastify_1.default)({ logger: true });
+    await server.register(env_1.default, options);
+    server.register(jwt_1.default, { secret: server.config.JWT_SECRET });
+    server.register(cookie_1.default, {
+        secret: server.config.JWT_SECRET,
+        hook: "preHandler",
+    });
+    server.register(user_route_1.userRoutes, { prefix: "api/user" });
+    server.addHook("preHandler", (req, res, next) => {
+        req.jwt = server.jwt;
+        return next();
+    });
+    server.get("/healthcheck", async (request, reply) => {
+        reply.send({ message: "Success" });
+    });
+    return server;
+}
+async function start() {
+    try {
+        const server = await buildServer();
+        await server.listen({ port: 8080 });
+        console.log(`Server listening on ${8080}`);
+    }
+    catch (err) {
         console.error(err);
         process.exit(1);
     }
-    console.log(`Server listening at ${address}`);
-});
+}
+start();

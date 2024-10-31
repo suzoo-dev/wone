@@ -96,46 +96,6 @@ async function main() {
         data: inputData,
       });
     }
-    // if (step.input) {
-    //   const createdInput = await prisma.input.create({
-    //     data: {
-    //       id: step.input.id,
-    //       label: step.input.label,
-    //       required: step.input.required,
-    //       inputType: inputTypeMapping[step.input.__typename],
-    //       options: {
-    //         create: step.input.options.map((option) => ({
-    //           label: option.label,
-    //           value: option.value,
-    //         })),
-    //       },
-    //       Step: {
-    //         connect: { id: step.id },
-    //       },
-    //     },
-    //   });
-
-    //   await prisma.step.create({
-    //     data: {
-    //       id: step.id,
-    //       title: step.titleHtml,
-    //       subtitle: step.subtitleHtml,
-    //       type: stepTypeMapping[step.__typename],
-    //       Input: {
-    //         connect: { id: createdInput.id },
-    //       },
-    //     },
-    //   });
-    // } else {
-    //   await prisma.step.create({
-    //     data: {
-    //       id: step.id,
-    //       title: step.titleHtml,
-    //       subtitle: step.subtitleHtml,
-    //       type: stepTypeMapping[step.__typename],
-    //     },
-    //   });
-    // }
   }
 
   console.log("Seeding completed!");
