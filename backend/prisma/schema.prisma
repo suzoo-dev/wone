@@ -22,9 +22,9 @@ model User {
 }
 
 model Step {
-  id           Int         @id @default(autoincrement())
-  title        String
-  subtitle     String
+  id           String         @unique @id
+  title        String?
+  subtitle     String?
   type         StepType
   Assessment   Assessment? @relation(fields: [assessmentId], references: [id])
   assessmentId Int?
@@ -46,9 +46,9 @@ model Assessment {
 }
 
 model Input {
-  id        Int        @id @default(autoincrement())
-  Step      Step       @relation(fields: [stepId], references: [id])
-  stepId    Int
+  id        String        @unique @id
+  Step      Step        @relation(fields: [stepId], references: [id])
+  stepId    String
   label     String
   options   Option[]
   required  Boolean
@@ -59,7 +59,7 @@ model Input {
 model Option {
   id      Int    @id @default(autoincrement())
   Input   Input  @relation(fields: [inputId], references: [id])
-  inputId Int
+  inputId String
   label   String
   value   String
 }
@@ -67,9 +67,9 @@ model Option {
 model Response {
   id        Int      @id @default(autoincrement())
   Step      Step     @relation(fields: [stepId], references: [id])
-  stepId    Int
+  stepId    String
   Input     Input    @relation(fields: [inputId], references: [id])
-  inputId   Int
+  inputId   String
   User      User     @relation(fields: [userId], references: [id])
   userId    Int
   value     String

@@ -15,15 +15,17 @@ CREATE TABLE "User" (
     "id" SERIAL NOT NULL,
     "username" TEXT NOT NULL,
     "role" "Role" NOT NULL DEFAULT 'USER',
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "Step" (
-    "id" SERIAL NOT NULL,
-    "title" TEXT NOT NULL,
-    "subtitle" TEXT NOT NULL,
+    "id" TEXT NOT NULL,
+    "title" TEXT,
+    "subtitle" TEXT,
     "type" "StepType" NOT NULL,
     "assessmentId" INTEGER,
 
@@ -35,14 +37,18 @@ CREATE TABLE "Assessment" (
     "id" SERIAL NOT NULL,
     "version" TEXT NOT NULL,
     "type" "AssessmentType" NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+    "createdById" INTEGER,
+    "updatedById" INTEGER,
 
     CONSTRAINT "Assessment_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "Input" (
-    "id" SERIAL NOT NULL,
-    "stepId" INTEGER NOT NULL,
+    "id" TEXT NOT NULL,
+    "stepId" TEXT NOT NULL,
     "label" TEXT NOT NULL,
     "required" BOOLEAN NOT NULL,
     "inputType" "InputType" NOT NULL,
@@ -53,7 +59,7 @@ CREATE TABLE "Input" (
 -- CreateTable
 CREATE TABLE "Option" (
     "id" SERIAL NOT NULL,
-    "inputId" INTEGER NOT NULL,
+    "inputId" TEXT NOT NULL,
     "label" TEXT NOT NULL,
     "value" TEXT NOT NULL,
 
@@ -63,10 +69,12 @@ CREATE TABLE "Option" (
 -- CreateTable
 CREATE TABLE "Response" (
     "id" SERIAL NOT NULL,
-    "stepId" INTEGER NOT NULL,
-    "inputId" INTEGER NOT NULL,
+    "stepId" TEXT NOT NULL,
+    "inputId" TEXT NOT NULL,
     "userId" INTEGER NOT NULL,
     "value" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
 
     CONSTRAINT "Response_pkey" PRIMARY KEY ("id")
 );
@@ -74,8 +82,20 @@ CREATE TABLE "Response" (
 -- CreateIndex
 CREATE UNIQUE INDEX "User_username_key" ON "User"("username");
 
+-- CreateIndex
+CREATE UNIQUE INDEX "Step_id_key" ON "Step"("id");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Input_id_key" ON "Input"("id");
+
 -- AddForeignKey
 ALTER TABLE "Step" ADD CONSTRAINT "Step_assessmentId_fkey" FOREIGN KEY ("assessmentId") REFERENCES "Assessment"("id") ON DELETE SET NULL ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Assessment" ADD CONSTRAINT "Assessment_createdById_fkey" FOREIGN KEY ("createdById") REFERENCES "User"("id") ON DELETE SET NULL ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Assessment" ADD CONSTRAINT "Assessment_updatedById_fkey" FOREIGN KEY ("updatedById") REFERENCES "User"("id") ON DELETE SET NULL ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "Input" ADD CONSTRAINT "Input_stepId_fkey" FOREIGN KEY ("stepId") REFERENCES "Step"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
