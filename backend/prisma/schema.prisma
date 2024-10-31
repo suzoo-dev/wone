@@ -66,6 +66,7 @@ model Option {
 
 model Response {
   id        Int      @id @default(autoincrement())
+  entryId   String
   Step      Step     @relation(fields: [stepId], references: [id])
   stepId    String
   Input     Input    @relation(fields: [inputId], references: [id])
