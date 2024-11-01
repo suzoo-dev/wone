@@ -1,4 +1,3 @@
-import { create } from "axios";
 import { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
 import { createAssessment } from "./assessment.controller";
 
