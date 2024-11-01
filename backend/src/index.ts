@@ -57,6 +57,17 @@ async function buildServer() {
     }
   );
 
+  server.decorate(
+    "isAdmin",
+    async (req: FastifyRequest, reply: FastifyReply) => {
+      if (req.user.role !== "ADMIN") {
+        return reply
+          .status(403)
+          .send({ message: "Access denied: Admins only" });
+      }
+    }
+  );
+
   server.get("/healthcheck", async (request, reply) => {
     reply.send({ message: "Success" });
   });

@@ -8,6 +8,7 @@ declare module "fastify" {
       DATABASE_URL: string;
     };
     authenticate: any;
+    isAdmin: any;
   }
   export interface FastifyRequest {
     jwt: JWT;
