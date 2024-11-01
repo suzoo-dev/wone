@@ -8,6 +8,7 @@ const env_1 = __importDefault(require("@fastify/env"));
 const jwt_1 = __importDefault(require("@fastify/jwt"));
 const cookie_1 = __importDefault(require("@fastify/cookie"));
 const user_route_1 = require("./modules/user/user.route");
+const assessment_route_1 = require("./modules/assessment/assessment.route");
 const schema = {
     type: "object",
     properties: {
@@ -34,9 +35,18 @@ async function buildServer() {
         hook: "preHandler",
     });
     server.register(user_route_1.userRoutes, { prefix: "api/user" });
+    server.register(assessment_route_1.assessmentRoutes, { prefix: "api/assessment" });
     server.addHook("preHandler", (req, res, next) => {
         req.jwt = server.jwt;
         return next();
+    });
+    server.decorate("authenticate", async (req, reply) => {
+        const token = req.cookies.access_token;
+        if (!token) {
+            return reply.status(401).send({ message: "Authentication required" });
+        }
+        const decoded = req.jwt.verify(token);
+        req.user = decoded;
     });
     server.get("/healthcheck", async (request, reply) => {
         reply.send({ message: "Success" });
