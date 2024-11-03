@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createAssessment = createAssessment;
-exports.getAssessmentById = getAssessmentById;
+exports.getAssessmentByTypeAndVersion = getAssessmentByTypeAndVersion;
 const prisma_1 = __importDefault(require("../../utils/prisma"));
 async function createAssessment(req, reply) {
     const { version, type, steps } = req.body;
@@ -37,12 +37,14 @@ async function createAssessment(req, reply) {
     });
     reply.send(createdAssessment);
 }
-async function getAssessmentById(req, reply) {
+async function getAssessmentByTypeAndVersion(req, reply) {
     const { type, version } = req.params;
     const assessment = await prisma_1.default.assessment.findUnique({
         where: {
-            version,
-            type,
+            version_type: {
+                version,
+                type,
+            },
         },
     });
     if (!assessment) {

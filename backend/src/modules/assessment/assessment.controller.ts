@@ -47,7 +47,7 @@ export async function createAssessment(
   reply.send(createdAssessment);
 }
 
-export async function getAssessmentById(
+export async function getAssessmentByTypeAndVersion(
   req: FastifyRequest<{ Params: { version: string; type: string } }>,
   reply: FastifyReply
 ) {
