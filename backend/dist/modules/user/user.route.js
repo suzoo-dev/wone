@@ -3,9 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.userRoutes = userRoutes;
 const user_controller_1 = require("./user.controller");
 async function userRoutes(app) {
-    app.get("/", (req, reply) => {
-        reply.send({ message: "user route" });
-    });
     app.post("/login", {
         schema: {
             body: {

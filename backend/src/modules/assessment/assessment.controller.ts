@@ -1,10 +1,10 @@
-import { Step } from "./../../../node_modules/.prisma/client/index.d";
 import { FastifyReply, FastifyRequest } from "fastify";
+import semver from "semver";
 import Prisma from "../../utils/prisma";
 
 export async function createAssessment(
   req: FastifyRequest<{
-    Body: { version: string; type: string; steps: any[] }; //TODO: Need to handle these types.
+    Body: { version: string; type: string; steps: any[] };
   }>,
   reply: FastifyReply
 ) {
@@ -13,7 +13,7 @@ export async function createAssessment(
   const createdAssessment = await Prisma.assessment.create({
     data: {
       version,
-      type, //TODO: This will be a new type.
+      type,
       steps: {
         create: steps.map((step) => ({
           id: step.id, //TODO: The current format for this is related to the type of assessment, followed by an integer.
@@ -54,15 +54,33 @@ export async function getAssessmentByTypeAndVersion(
 ) {
   const { type, version } = req.params;
 
-  const assessment = await Prisma.assessment.findUnique({
-    where: {
-      version_type: {
-        version,
-        type,
+  let assessment;
+
+  if (version) {
+    assessment = await Prisma.assessment.findUnique({
+      where: {
+        version_type: {
+          version,
+          type,
+        },
       },
-    },
-    include: { steps: { include: { Input: true } } },
-  });
+      include: {
+        steps: { include: { Input: { include: { options: true } } } },
+      },
+    });
+  } else {
+    // If no version is specified, get the latest version of the assessment
+    const allAssessments = await Prisma.assessment.findMany({
+      where: { type },
+      include: {
+        steps: { include: { Input: { include: { options: true } } } },
+      },
+    });
+
+    assessment = allAssessments.sort((a, b) =>
+      semver.rcompare(a.version, b.version)
+    )[0];
+  }
 
   if (!assessment) {
     reply.status(404).send({ message: "Assessment not found" });

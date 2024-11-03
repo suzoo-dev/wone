@@ -19,11 +19,13 @@
     "@fastify/jwt": "^9.0.1",
     "@prisma/client": "^5.21.1",
     "fastify": "^5.0.0",
+    "semver": "^7.6.3",
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.8.4",
+    "@types/semver": "^7.5.8",
     "prisma": "^5.21.1",
     "typescript": "^5.6.3"
   }
