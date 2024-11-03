@@ -1,9 +1,4 @@
-import {
-  PrismaClient,
-  InputType,
-  StepType,
-  AssessmentType,
-} from "@prisma/client";
+import { PrismaClient, InputType, StepType } from "@prisma/client";
 import * as fs from "fs";
 
 const prisma = new PrismaClient();
@@ -48,10 +43,6 @@ const inputTypeMapping: { [key: string]: InputType } = {
   TextInput: InputType.TEXT_INPUT,
 };
 
-const assessmentTypeMapping: { [key: string]: AssessmentType } = {
-  LearnerAssessment: AssessmentType.LEARNER_ASSESSMENT,
-};
-
 async function main() {
   const data: AssessmentData = JSON.parse(
     fs.readFileSync("./assessment.json", "utf8")
@@ -60,7 +51,7 @@ async function main() {
   const createdAssessment = await prisma.assessment.create({
     data: {
       version: data.version,
-      type: assessmentTypeMapping[data.__typename],
+      type: data.__typename,
     },
   });
 

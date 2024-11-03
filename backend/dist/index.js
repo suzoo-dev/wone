@@ -48,6 +48,13 @@ async function buildServer() {
         const decoded = req.jwt.verify(token);
         req.user = decoded;
     });
+    server.decorate("isAdmin", async (req, reply) => {
+        if (req.user.role !== "ADMIN") {
+            return reply
+                .status(403)
+                .send({ message: "Access denied: Admins only" });
+        }
+    });
     server.get("/healthcheck", async (request, reply) => {
         reply.send({ message: "Success" });
     });

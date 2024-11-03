@@ -1,16 +1,14 @@
 import { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
-import { createAssessment } from "./assessment.controller";
+import { createAssessment, getAssessmentById } from "./assessment.controller";
 import { createAssessmentSchema } from "./assessment.schema";
 
 export async function assessmentRoutes(app: FastifyInstance) {
   app.get(
-    "/",
+    "/assessment/:id",
     {
       preHandler: [app.authenticate],
     },
-    (req: FastifyRequest, reply: FastifyReply) => {
-      reply.send({ message: "assessment route" });
-    }
+    getAssessmentById
   );
 
   app.post(

@@ -36,13 +36,15 @@ model Assessment {
   id          Int            @id @default(autoincrement())
   steps       Step[]
   version     String
-  type        AssessmentType
+  type        String
   createdAt   DateTime       @default(now())
   updatedAt   DateTime       @updatedAt
   createdBy   User?          @relation("createdAssessments", fields: [createdById], references: [id])
   createdById Int?
   updatedBy   User?          @relation("updatedAssessments", fields: [updatedById], references: [id])
   updatedById Int?
+
+  @@unique([version, type])
 }
 
 model Input {
@@ -90,9 +92,9 @@ enum StepType {
   ASSESSMENT_END_STEP
 }
 
-enum AssessmentType {
-  LEARNER_ASSESSMENT
-}
+// enum AssessmentType {
+//   LEARNER_ASSESSMENT
+// }
 
 enum InputType {
   SELECT_INPUT
