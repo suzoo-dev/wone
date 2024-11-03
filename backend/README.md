@@ -1,4 +1,4 @@
-# Graham Fletcher's WONE Assessment - Backend
+# The Backend
 
 Welcome to **The Backend**! This part of the project is built using Fastify, Prisma and Postgres. Below you'll find instructions for setting up and running the project.
 
