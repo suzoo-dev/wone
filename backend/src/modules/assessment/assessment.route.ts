@@ -1,5 +1,6 @@
 import { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
 import { createAssessment } from "./assessment.controller";
+import { createAssessmentSchema } from "./assessment.schema";
 
 export async function assessmentRoutes(app: FastifyInstance) {
   app.get(
@@ -16,49 +17,10 @@ export async function assessmentRoutes(app: FastifyInstance) {
     "/admin/assessment",
     {
       preHandler: [app.authenticate, app.isAdmin],
-      schema: {
-        body: {
-          type: "object",
-          properties: {
-            version: { type: "string" },
-            type: { type: "string" },
-            steps: {
-              type: "array",
-              items: {
-                type: "object",
-                properties: {
-                  title: { type: "string" },
-                  subtitle: { type: "string" },
-                  type: { type: "string" },
-                  inputs: {
-                    type: "array",
-                    items: {
-                      type: "object",
-                      properties: {
-                        label: { type: "string" },
-                        required: { type: "boolean" },
-                        inputType: { type: "string" },
-                        options: {
-                          type: "array",
-                          items: {
-                            type: "object",
-                            properties: {
-                              label: { type: "string" },
-                              value: { type: "string" },
-                            },
-                          },
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
+      schema: createAssessmentSchema,
     },
     createAssessment
   );
+
   app.log.info("assessment routes registered");
 }
