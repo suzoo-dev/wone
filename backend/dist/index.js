@@ -9,6 +9,7 @@ const jwt_1 = __importDefault(require("@fastify/jwt"));
 const cookie_1 = __importDefault(require("@fastify/cookie"));
 const user_route_1 = require("./modules/user/user.route");
 const assessment_route_1 = require("./modules/assessment/assessment.route");
+const response_route_1 = require("./modules/response/response.route");
 const schema = {
     type: "object",
     properties: {
@@ -36,6 +37,7 @@ async function buildServer() {
     });
     server.register(user_route_1.userRoutes, { prefix: "api/user" });
     server.register(assessment_route_1.assessmentRoutes, { prefix: "api/assessment" });
+    server.register(response_route_1.responseRoutes, { prefix: "api/response" });
     server.addHook("preHandler", (req, res, next) => {
         req.jwt = server.jwt;
         return next();
