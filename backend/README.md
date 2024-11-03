@@ -39,13 +39,12 @@ Welcome to **The Backend**! This part of the project is built using Fastify, Pri
 4. **Prisma Commands**:
    The following Prisma commands should **not** be run as part of this setup:
 
-   :x: - `prisma migrate dev`
-   &nbsp;
-   :x: - `prisma migrate deploy`
+   - :x: `prisma migrate dev`
+   - :x: `prisma migrate deploy`
 
    **Feel free to use**:
 
-   - `prisma db pull` (if you wish to view the schema without altering the database).
+   - :white_check_mark: `prisma db pull` (if you wish to view the schema without altering the database).
 
 ## Return to the Main README
 
