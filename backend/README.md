@@ -40,6 +40,7 @@ Welcome to **The Backend**! This part of the project is built using Fastify, Pri
    The following Prisma commands should **not** be run as part of this setup:
 
    :x: - `prisma migrate dev`
+   &nbsp;
    :x: - `prisma migrate deploy`
 
    **Feel free to use**:
