@@ -46,6 +46,7 @@ async function getAssessmentByTypeAndVersion(req, reply) {
                 type,
             },
         },
+        include: { steps: { include: { Input: true } } },
     });
     if (!assessment) {
         reply.status(404).send({ message: "Assessment not found" });

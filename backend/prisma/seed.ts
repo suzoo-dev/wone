@@ -62,6 +62,7 @@ async function main() {
         title: step.titleHtml,
         subtitle: step.subtitleHtml,
         type: stepTypeMapping[step.__typename],
+        assessmentId: createdAssessment.id,
       },
     });
 
@@ -88,6 +89,22 @@ async function main() {
       });
     }
   }
+
+  await prisma.user.create({
+    data: {
+      username: "admin",
+      role: "ADMIN",
+      updatedAt: new Date(),
+    },
+  });
+
+  await prisma.user.create({
+    data: {
+      username: "user",
+      role: "USER",
+      updatedAt: new Date(),
+    },
+  });
 
   console.log("Seeding completed!");
 }

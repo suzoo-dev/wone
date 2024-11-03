@@ -1,3 +1,4 @@
+import { Step } from "./../../../node_modules/.prisma/client/index.d";
 import { FastifyReply, FastifyRequest } from "fastify";
 import Prisma from "../../utils/prisma";
 
@@ -60,6 +61,7 @@ export async function getAssessmentByTypeAndVersion(
         type,
       },
     },
+    include: { steps: { include: { Input: true } } },
   });
 
   if (!assessment) {
