@@ -1,4 +1,4 @@
-# Graham Fletcher's WONE Assessment
+:tada: # Graham Fletcher's WONE Assessment :tada:
 
 ## Getting Started
 
