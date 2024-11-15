@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import "./App.css";
 import useLoadAssessment from "./hooks/useLoadAssessment";
+import StepComponent from "./components/Step";
 
 const App = () => {
   const { assessment, loading, error } = useLoadAssessment();
@@ -17,7 +18,7 @@ const App = () => {
     <>
       {assessment
         ? assessment.steps.map((step, index) => (
-            <div key={index}>{step.title}</div>
+            <StepComponent key={index} step={step} />
           ))
         : null}
     </>
