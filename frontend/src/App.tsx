@@ -1,24 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./App.css";
-import { Assessment } from "./types";
+import useLoadAssessment from "./hooks/useLoadAssessment";
 
 const App = () => {
-  const [assessment, setAssessment] = useState<Assessment>();
-
-  useEffect(() => {
-    const loadAssessment = async () => {
-      const assessment = await fetch(
-        "http://127.0.0.1:8080/api/assessment/LearnerAssessment/1.5.0"
-      );
-      const data = await assessment.json();
-      setAssessment(data);
-    };
-    loadAssessment();
-  }, []);
+  const { assessment, loading, error } = useLoadAssessment();
 
   useEffect(() => {
     console.log(assessment);
   }, [assessment]);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>;
+  if (!assessment) return <div>No assessment found</div>;
 
   return (
     <>
