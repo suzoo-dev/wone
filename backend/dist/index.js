@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const fastify_1 = __importDefault(require("fastify"));
 const env_1 = __importDefault(require("@fastify/env"));
 const jwt_1 = __importDefault(require("@fastify/jwt"));
+const cors_1 = __importDefault(require("@fastify/cors"));
 const cookie_1 = __importDefault(require("@fastify/cookie"));
 const user_route_1 = require("./modules/user/user.route");
 const assessment_route_1 = require("./modules/assessment/assessment.route");
@@ -15,8 +16,9 @@ const schema = {
     properties: {
         JWT_SECRET: { type: "string" },
         DATABASE_URL: { type: "string" },
+        FRONTEND_URL: { type: "string", default: "http://localhost:5173" },
     },
-    required: ["JWT_SECRET", "DATABASE_URL"],
+    required: ["JWT_SECRET", "DATABASE_URL", "FRONTEND_URL"],
 };
 const options = {
     confKey: "config",
@@ -30,6 +32,10 @@ const options = {
 async function buildServer() {
     const server = (0, fastify_1.default)({ logger: true });
     await server.register(env_1.default, options);
+    server.register(cors_1.default, {
+        origin: server.config.FRONTEND_URL,
+        credentials: false,
+    });
     server.register(jwt_1.default, { secret: server.config.JWT_SECRET });
     server.register(cookie_1.default, {
         secret: server.config.JWT_SECRET,

@@ -6,7 +6,7 @@ export async function responseRoutes(app: FastifyInstance) {
   app.post(
     "/",
     {
-      preHandler: [app.authenticate],
+      // preHandler: [app.authenticate],
       schema: createResponseSchema,
     },
     createResponse

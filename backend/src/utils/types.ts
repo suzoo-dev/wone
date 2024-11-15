@@ -4,6 +4,7 @@ import { User } from "@prisma/client";
 declare module "fastify" {
   export interface FastifyInstance {
     config: {
+      FRONTEND_URL: string;
       JWT_SECRET: string;
       DATABASE_URL: string;
     };

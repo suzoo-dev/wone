@@ -1,6 +1,7 @@
 import fastify, { FastifyRequest, FastifyReply } from "fastify";
 import fastifyEnv from "@fastify/env";
 import fjwt, { FastifyJWT } from "@fastify/jwt";
+import cors from "@fastify/cors";
 import fCookie from "@fastify/cookie";
 import { userRoutes } from "./modules/user/user.route";
 import { assessmentRoutes } from "./modules/assessment/assessment.route";
@@ -11,8 +12,9 @@ const schema = {
   properties: {
     JWT_SECRET: { type: "string" },
     DATABASE_URL: { type: "string" },
+    FRONTEND_URL: { type: "string", default: "http://localhost:5173" },
   },
-  required: ["JWT_SECRET", "DATABASE_URL"],
+  required: ["JWT_SECRET", "DATABASE_URL", "FRONTEND_URL"],
 };
 
 const options = {
@@ -29,6 +31,11 @@ async function buildServer() {
   const server = fastify({ logger: true });
 
   await server.register(fastifyEnv, options);
+
+  server.register(cors, {
+    origin: server.config.FRONTEND_URL,
+    credentials: false,
+  });
 
   server.register(fjwt, { secret: server.config.JWT_SECRET });
 

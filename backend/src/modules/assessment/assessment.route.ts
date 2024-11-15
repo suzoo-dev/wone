@@ -8,9 +8,9 @@ import { createAssessmentSchema } from "./assessment.schema";
 export async function assessmentRoutes(app: FastifyInstance) {
   app.get(
     "/:type/:version",
-    {
-      preHandler: [app.authenticate],
-    },
+    // {
+    //   preHandler: [app.authenticate],
+    // },
     getAssessmentByTypeAndVersion
   );
 
