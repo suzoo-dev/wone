@@ -13,7 +13,7 @@ async function createResponse(req, reply) {
         entryId,
         stepId: response.stepId,
         inputId: response.inputId,
-        userId: req.user.id,
+        userId: 5, // req.user.id,
         value: response.value,
     }));
     const createdResponse = await prisma_1.default.response.createMany({
