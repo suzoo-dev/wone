@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "./App.css";
 import useLoadAssessment from "./hooks/useLoadAssessment";
 import { useResponseStore } from "./store/useResponseStore";
@@ -20,7 +19,6 @@ const App = () => {
       });
 
       if (!response.ok) {
-        console.log(response);
         throw new Error("Failed to submit response");
       }
 
@@ -42,8 +40,8 @@ const App = () => {
   /**
    * TODO:
    * - [x] Save responses
-   * - [ ] Load previous responses
    * - [ ] Break steps into groups based on id prefix
+   * - [ ] Load previous responses
    * - [ ] Add step navigation
    * - [ ] Add progress bar
    */
