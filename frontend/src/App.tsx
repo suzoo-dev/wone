@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import "./App.css";
 import useLoadAssessment from "./hooks/useLoadAssessment";
 import { useResponseStore } from "./store/useResponseStore";
@@ -53,7 +54,7 @@ const App = () => {
             <StepComponent key={index} step={step} />
           ))
         : null}
-      <button onClick={handleSubmit}>Submit</button>
+      <Button onClick={handleSubmit}>Submit</Button>
     </>
   );
 };
