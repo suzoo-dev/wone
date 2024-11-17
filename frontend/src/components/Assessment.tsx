@@ -58,7 +58,7 @@ const Assessment = () => {
     <>
       {assessment
         ? assessment.steps.map((step, index) => (
-            <StepComponent key={index} step={step} />
+            <StepComponent key={`step-${index}`} step={step} />
           ))
         : null}
       <Button className="mb-2" onClick={handleSubmit}>

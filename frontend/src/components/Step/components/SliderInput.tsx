@@ -29,7 +29,7 @@ const SliderInput: React.FC<SliderInputProps> = ({
       </div>
       <div className="w-full flex justify-between font-bold italic">
         {options.map((option) => (
-          <div key={option.value} className="w-20">
+          <div key={`${option.value}-${option.label}`} className="w-20">
             {option.label}
           </div>
         ))}

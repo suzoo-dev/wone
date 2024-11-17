@@ -10,7 +10,10 @@ interface ButtonOptionsProps {
 const ButtonOptions: React.FC<ButtonOptionsProps> = ({ options, onClick }) => (
   <div className="w-[75%] mx-auto flex flex-row justify-around mb-8">
     {options.map((option) => (
-      <Button key={option.value} onClick={() => onClick(option)}>
+      <Button
+        key={`option-${option.value}-${option.label}`}
+        onClick={() => onClick(option)}
+      >
         {option.label}
       </Button>
     ))}
