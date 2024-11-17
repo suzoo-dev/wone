@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Slider } from "@/components/ui/slider";
 import { Step } from "../types";
 import { useResponseStore } from "../store/useResponseStore";
@@ -8,20 +8,14 @@ interface StepComponentProps {
 }
 
 const StepComponent: React.FC<StepComponentProps> = ({ step }) => {
-  const [currentAnswer, setCurrentAnswer] = React.useState("");
   const setAnswer = useResponseStore((state) => state.setAnswer);
   const answer = useResponseStore(
     (state) => state.answers.find((ans) => ans.stepId === step.id)?.value || ""
   );
 
-  useEffect(() => {
-    setCurrentAnswer(answer);
-  }, [answer]);
-
-  useEffect(() => {
-    if (!step.Input || step.Input.length === 0) return;
-    setAnswer(step.id, step?.Input[0].id, currentAnswer);
-  }, [currentAnswer, setAnswer, step?.Input, step.id]);
+  const handleChange = (value: number[]) => {
+    setAnswer(step.id, step?.Input[0].id, value[0].toString());
+  };
 
   if (step.type === "ASSESSMENT_INFO_STEP") {
     return (
@@ -57,7 +51,7 @@ const StepComponent: React.FC<StepComponentProps> = ({ step }) => {
     return (
       <div>
         <h1
-          className="text-xl mt-8 mb-4"
+          className="text-xl mt-8 mb-2"
           dangerouslySetInnerHTML={{ __html: step.title }}
         ></h1>
         {step.subtitle ? (
@@ -67,12 +61,13 @@ const StepComponent: React.FC<StepComponentProps> = ({ step }) => {
           ></div>
         ) : null}
         <div className="w-[75%] mx-auto flex flex-col mb-8">
-          <div className="w-full px-10">
+          <div className="w-full px-10 mb-1">
             <Slider
               min={optionsMin}
               max={optionsMax}
               step={1}
               defaultValue={[parseInt(answer, 10)]}
+              onValueChange={handleChange}
             />
           </div>
           <div className="w-full flex flex-row justify-between mb-2 font-bold italic">
