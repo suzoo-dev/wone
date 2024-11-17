@@ -27,9 +27,9 @@ const Assessment = () => {
       resetAnswers();
     } catch (err: unknown) {
       if (err instanceof Error) {
-        console.error(err.message);
+        toast({ description: err.message });
       } else {
-        console.error("Unknown error");
+        toast({ description: "Unknown error occurred" });
       }
     }
   };

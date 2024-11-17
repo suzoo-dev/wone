@@ -1,11 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Slider } from "@/components/ui/slider";
 import { Step } from "../types";
 import { useResponseStore } from "../store/useResponseStore";
 
@@ -32,7 +26,9 @@ const StepComponent: React.FC<StepComponentProps> = ({ step }) => {
   if (step.type === "ASSESSMENT_INFO_STEP") {
     return (
       <div>
-        {step.title ? <h2>{step.title}</h2> : null}
+        {step.title ? (
+          <h1 className="text-4xl font-bold mt-4 mb-4">{step.title}</h1>
+        ) : null}
         {step.subtitle ? (
           <div dangerouslySetInnerHTML={{ __html: step.subtitle }}></div>
         ) : null}
@@ -43,30 +39,50 @@ const StepComponent: React.FC<StepComponentProps> = ({ step }) => {
   if (step.type === "ASSESSMENT_QUESTION_STEP") {
     const input = step.Input[0];
     const options = input?.options || [];
+    let optionsMin;
+    let optionsMax;
+    if (options.length > 0) {
+      optionsMin = parseInt(
+        options.reduce((prev, curr) => (prev.value < curr.value ? prev : curr))
+          .value,
+        10
+      );
+      optionsMax = parseInt(
+        options.reduce((prev, curr) => (prev.value > curr.value ? prev : curr))
+          .value,
+        10
+      );
+    }
 
     return (
       <div>
-        <h2 dangerouslySetInnerHTML={{ __html: step.title }}></h2>
+        <h1
+          className="text-xl mt-8 mb-4"
+          dangerouslySetInnerHTML={{ __html: step.title }}
+        ></h1>
         {step.subtitle ? (
-          <div dangerouslySetInnerHTML={{ __html: step.subtitle }}></div>
+          <div
+            className="text-lg"
+            dangerouslySetInnerHTML={{ __html: step.subtitle }}
+          ></div>
         ) : null}
-        <Select
-          required={input?.required}
-          aria-label={input?.label || "Select an option"}
-          value={currentAnswer}
-          onValueChange={setCurrentAnswer}
-        >
-          <SelectTrigger>
-            <SelectValue placeholder="-- Please select an option --" />
-          </SelectTrigger>
-          <SelectContent>
-            {options.map((option) => (
-              <SelectItem key={option.id} value={option.value}>
-                {option.label}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+        <div className="w-[75%] mx-auto flex flex-col mb-8">
+          <div className="w-full px-10">
+            <Slider
+              min={optionsMin}
+              max={optionsMax}
+              step={1}
+              defaultValue={[parseInt(answer, 10)]}
+            />
+          </div>
+          <div className="w-full flex flex-row justify-between mb-2 font-bold italic">
+            {options
+              ? options.map((option) => {
+                  return <div className="w-20">{option.label}</div>;
+                })
+              : null}
+          </div>
+        </div>
       </div>
     );
   }
