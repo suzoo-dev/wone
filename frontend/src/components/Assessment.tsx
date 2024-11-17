@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import useLoadAssessment from "../hooks/useLoadAssessment";
-import { useResponseStore } from "../store/useResponseStore";
-import StepComponent from "./Step";
+import useLoadAssessment from "@/hooks/useLoadAssessment";
+import { useResponseStore } from "@/store/useResponseStore";
+import StepComponent from "@/components/Step";
+import AlertMessage from "@/components/AlertMessage";
 
 const Assessment = () => {
   const { toast } = useToast();
@@ -34,9 +35,24 @@ const Assessment = () => {
     }
   };
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>{error}</div>;
-  if (!assessment) return <div>No assessment found</div>;
+  if (loading)
+    return (
+      <AlertMessage
+        title="Loading..."
+        description="Please wait while we load the assessment"
+      />
+    );
+  if (error)
+    return (
+      <AlertMessage title="Error" description={error} variant="destructive" />
+    );
+  if (!assessment)
+    return (
+      <AlertMessage
+        title="No assessment found"
+        description="We can't find any assessment for you"
+      />
+    );
 
   return (
     <>

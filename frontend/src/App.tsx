@@ -4,9 +4,9 @@ import Assessment from "./components/Assessment";
 
 export default function App() {
   return (
-    <>
+    <div>
       <Assessment />
       <Toaster />
-    </>
+    </div>
   );
 }
