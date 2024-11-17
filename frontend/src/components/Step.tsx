@@ -1,7 +1,9 @@
 import React from "react";
 import { Slider } from "@/components/ui/slider";
-import { Step } from "../types";
-import { useResponseStore } from "../store/useResponseStore";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Option, Step } from "@/types";
+import { useResponseStore } from "@/store/useResponseStore";
 
 interface StepComponentProps {
   step: Step;
@@ -13,8 +15,14 @@ const StepComponent: React.FC<StepComponentProps> = ({ step }) => {
     (state) => state.answers.find((ans) => ans.stepId === step.id)?.value || ""
   );
 
-  const handleChange = (value: number[]) => {
-    setAnswer(step.id, step?.Input[0].id, value[0].toString());
+  const handleChange = (value: number[] | string) => {
+    const parsedValue = typeof value === "string" ? value : value[0].toString();
+    setAnswer(step.id, step?.Input[0].id, parsedValue);
+  };
+
+  const handleClick = (option: Option) => {
+    // Would need to implement some logic here, some answers route to another section of the assessment.
+    console.log(option);
   };
 
   if (step.type === "ASSESSMENT_INFO_STEP") {
@@ -60,24 +68,46 @@ const StepComponent: React.FC<StepComponentProps> = ({ step }) => {
             dangerouslySetInnerHTML={{ __html: step.subtitle }}
           ></div>
         ) : null}
-        <div className="w-[75%] mx-auto flex flex-col mb-8">
-          <div className="w-full px-10 mb-1">
-            <Slider
-              min={optionsMin}
-              max={optionsMax}
-              step={1}
-              defaultValue={[parseInt(answer, 10)]}
-              onValueChange={handleChange}
-            />
+        {input.inputType === "SELECT_INPUT" && options.length > 2 ? (
+          <div className="w-[75%] mx-auto flex flex-col mb-8">
+            <div className="w-full px-10 mb-1">
+              <Slider
+                min={optionsMin}
+                max={optionsMax}
+                step={1}
+                defaultValue={[parseInt(answer, 10)]}
+                onValueChange={handleChange}
+              />
+            </div>
+            <div className="w-full flex flex-row justify-between mb-2 font-bold italic">
+              {options
+                ? options.map((option) => {
+                    return <div className="w-20">{option.label}</div>;
+                  })
+                : null}
+            </div>
           </div>
-          <div className="w-full flex flex-row justify-between mb-2 font-bold italic">
-            {options
-              ? options.map((option) => {
-                  return <div className="w-20">{option.label}</div>;
-                })
-              : null}
+        ) : null}
+        {input.inputType === "SELECT_INPUT" && options.length <= 2 ? (
+          <div className="w-[75%] mx-auto flex flex-col mb-8">
+            <div className="flex flex-row justify-around w-full px-10 mb-1">
+              {options.map((option) => {
+                return (
+                  <Button onClick={() => handleClick(option)}>
+                    {option.label}
+                  </Button>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        ) : null}
+        {input.inputType === "TEXT_INPUT" ? (
+          <div className="w-[75%] mx-auto flex flex-col mb-8">
+            <div className="w-full px-10 mb-1">
+              <Input onChange={(e) => handleChange(e.target.value)} />
+            </div>
+          </div>
+        ) : null}
       </div>
     );
   }

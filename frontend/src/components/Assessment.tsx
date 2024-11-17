@@ -61,7 +61,9 @@ const Assessment = () => {
             <StepComponent key={index} step={step} />
           ))
         : null}
-      <Button onClick={handleSubmit}>Submit</Button>
+      <Button className="mb-2" onClick={handleSubmit}>
+        Submit
+      </Button>
     </>
   );
 };

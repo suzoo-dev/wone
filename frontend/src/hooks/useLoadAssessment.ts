@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Assessment } from "../types";
+import { Assessment } from "@/types";
 
 const useLoadAssessment = () => {
   const [assessment, setAssessment] = useState<Assessment>();
